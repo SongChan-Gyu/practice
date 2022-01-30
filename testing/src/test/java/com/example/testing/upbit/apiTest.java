@@ -1,32 +1,34 @@
-package com.example.testing;
+package com.example.testing.upbit;
 
+import com.example.testing.upbit.controller.UpbitApiController;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest
 @Slf4j
 @AutoConfigureMockMvc(addFilters = false)
-public class ControllerTest {
+@SpringBootTest
+public class apiTest {
 
     @Autowired
     private MockMvc mvc;
 
     @Test
-    public void account가_리턴된다() throws Exception{
-        String account = "account";
+    public void Api테스트() throws Exception{
 
-        mvc.perform(MockMvcRequestBuilders.get("/account1"))
+        mvc.perform(MockMvcRequestBuilders.post("/upbit/1"))
                 .andExpect(status().isOk())
-                .andExpect(content().string(account))
                 .andDo(MockMvcResultHandlers.print());
+
+        throw new Exception();
     }
+
 }

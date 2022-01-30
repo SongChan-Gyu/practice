@@ -29,3 +29,6 @@ spring:
     username:
     password:
     driverClassName: org.h2.Driver
+  redis:
+    host: localhost
+    port: 6379
