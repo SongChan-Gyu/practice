@@ -22,13 +22,21 @@ public class apiTest {
     private MockMvc mvc;
 
     @Test
-    public void Api테스트() throws Exception{
+    public void 계좌리스트() throws Exception{
 
-        mvc.perform(MockMvcRequestBuilders.post("/upbit/1"))
-                .andExpect(status().isOk())
-                .andDo(MockMvcResultHandlers.print());
+        mvc.perform(MockMvcRequestBuilders.post("/upbit/accounts"))
+                .andExpect(status().isOk());
+//                .andDo(MockMvcResultHandlers.print());
 
-        throw new Exception();
+    }
+
+    @Test
+    public void 주문가능() throws Exception{
+
+        mvc.perform(MockMvcRequestBuilders.post("/upbit/orderChance"))
+                .andExpect(status().isOk());
+//                .andDo(MockMvcResultHandlers.print());
+
     }
 
 }

@@ -1,4 +1,4 @@
-package com.example.testing.jpa.controller;
+package com.example.testing.jpa.Domain;
 
 import lombok.Builder;
 import lombok.Getter;

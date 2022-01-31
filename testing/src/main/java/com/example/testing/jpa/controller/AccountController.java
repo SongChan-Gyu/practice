@@ -1,4 +1,4 @@
-package com.example.testing;
+package com.example.testing.jpa.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;

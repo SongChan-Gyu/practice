@@ -1,7 +1,7 @@
 package com.example.testing;
 
-import com.example.testing.jpa.controller.Posts;
-import com.example.testing.jpa.controller.PostsRepository;
+import com.example.testing.jpa.Domain.Posts;
+import com.example.testing.jpa.Repository.PostsRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

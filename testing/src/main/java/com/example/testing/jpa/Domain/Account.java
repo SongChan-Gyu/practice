@@ -1,4 +1,4 @@
-package com.example.testing;
+package com.example.testing.jpa.Domain;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

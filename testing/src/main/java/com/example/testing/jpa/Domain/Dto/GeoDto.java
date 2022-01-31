@@ -1,4 +1,4 @@
-package com.example.testing;
+package com.example.testing.jpa.Domain.Dto;
 
 import lombok.Data;
 
