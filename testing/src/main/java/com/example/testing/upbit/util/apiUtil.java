@@ -32,7 +32,7 @@ public class apiUtil {
     private String serverUrl;
 
 
-    public HttpEntity request(String url, HashMap<String,String> params) throws Exception{
+    public String request(String url, HashMap<String,String> params) throws Exception{
 
         log.info("util.request("+url+")"+" START");
         log.info("TEST: **** accessKey =["+accessKey+"]");
@@ -56,9 +56,8 @@ public class apiUtil {
         //4. resonse
         HttpEntity entity = response.getEntity();
 
-        log.info(EntityUtils.toString(entity, "UTF-8"));
 
-        return entity;
+        return EntityUtils.toString(entity, "UTF-8");
 
     }
 

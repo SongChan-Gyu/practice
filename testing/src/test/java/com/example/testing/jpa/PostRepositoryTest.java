@@ -1,4 +1,4 @@
-package com.example.testing;
+package com.example.testing.jpa;
 
 import com.example.testing.jpa.Domain.Posts;
 import com.example.testing.jpa.Repository.PostsRepository;

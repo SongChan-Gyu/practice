@@ -25,8 +25,8 @@ public class apiTest {
     public void 계좌리스트() throws Exception{
 
         mvc.perform(MockMvcRequestBuilders.post("/upbit/accounts"))
-                .andExpect(status().isOk());
-//                .andDo(MockMvcResultHandlers.print());
+                .andExpect(status().isOk())
+                .andDo(MockMvcResultHandlers.print());
 
     }
 
@@ -34,8 +34,8 @@ public class apiTest {
     public void 주문가능() throws Exception{
 
         mvc.perform(MockMvcRequestBuilders.post("/upbit/orderChance"))
-                .andExpect(status().isOk());
-//                .andDo(MockMvcResultHandlers.print());
+                .andExpect(status().isOk())
+                .andDo(MockMvcResultHandlers.print());
 
     }
 

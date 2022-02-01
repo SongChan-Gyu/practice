@@ -4,16 +4,18 @@
 
         <layout class="ch.qos.logback.classic.PatternLayout">
             <Pattern>
-                %black(%d{ISO8601}) %highlight(%-5level) [%blue(%t)] %yellow(%C{1.}) : {%mdc} - %msg%n%throwable
+                %black(%d{ISO8601}) %highlight(%-5level) [%green(%t)] %yellow(%C{1.}) : {%mdc} - %msg%n%throwable
             </Pattern>
         </layout>
     </appender>
 
     <!-- API 테스트로 인해서 DB 관련 로그 OFF -->
-    <logger level="OFF" appender-ref="console" name="org.springframework.data"/>
+    <!--<logger level="OFF" appender-ref="console" name="org.springframework.data"/> -->
+    <!--
     <logger level="OFF" appender-ref="console" name="org.hibernate"/>
     <logger level="OFF" appender-ref="console" name="com.mongodb"/>
-    <logger level="OFF" appender-ref="console" name="java.net"/>
+    -->
+    <!--<logger level="OFF" appender-ref="console" name="java.net"/>-->
 
     <root level="INFO">
         <appender-ref ref="Console"/>
