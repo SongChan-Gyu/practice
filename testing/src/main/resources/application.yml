@@ -8,8 +8,6 @@ spring:
   resources:
     cache-period: 0
   thymeleaf:
-#    prefix: classpath:src/main/resources/templates/
-#    suffix: .html
     cache: false
     check-template-location: true
   jpa:
@@ -23,15 +21,11 @@ spring:
         use_sql_comments: true
     generate-ddl: true
     database-platform: org.hibernate.dialect.H2Dialect
-
   datasource:
     url: jdbc:h2:mem:mydb;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false
     username:
     password:
     driverClassName: org.h2.Driver
-  redis:
-    host: localhost
-    port: 6379
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
 
